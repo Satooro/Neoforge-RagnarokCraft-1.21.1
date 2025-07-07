@@ -1,5 +1,9 @@
 package net.satooro.ragnarokcraft;
 
+import net.minecraft.world.item.CreativeModeTabs;
+import net.satooro.ragnarokcraft.block.ModBlocks;
+import net.satooro.ragnarokcraft.item.ModCreativeModelTabs;
+import net.satooro.ragnarokcraft.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -25,6 +29,11 @@ public class RagnarokCraftMod {
     public RagnarokCraftMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModelTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
@@ -38,7 +47,12 @@ public class RagnarokCraftMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RAW_YMIRITA.get());
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.RAGNARIUM_BLOCK.get());
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
