@@ -1,0 +1,32 @@
+{
+  "item.ragnarokcraft.gu_aberto":  "Gu do gu aberto",
+  "item.ragnarokcraft.raw_ragnarium": "Ragnarium bruto",
+  "item.ragnarokcraft.raw_ymirita": "Ymirita bruto",
+  "item.ragnarokcraft.raw_thornium": "Thornium bruto",
+  "item.ragnarokcraft.raw_mimir_heart": "Mimir Heart bruto",
+  "item.ragnarokcraft.raw_muspelium": "Muspelium bruto",
+  "item.ragnarokcraft.raw_niflacril": "Niflacril bruto",
+
+  "item.ragnarokcraft.ragnarium_ingot": "Barra de Ragnarium",
+  "item.ragnarokcraft.ymirita_ingot": "Barra de Ymirita",
+  "item.ragnarokcraft.thornium_ingot": "Barra de Thornium",
+  "item.ragnarokcraft.mimir_heart_ingot": "Barra de Mimir Heart",
+  "item.ragnarokcraft.muspelium_ingot": "Barra de Muspelium",
+  "item.ragnarokcraft.niflacril_ingot": "Barra de Niflacril",
+
+  "block.ragnarokcraft.ragnarium_block": "Bloco de Ragnarium",
+  "block.ragnarokcraft.ymirita_block": "Bloco de Ymirita",
+  "block.ragnarokcraft.thornium_block": "Bloco de Thornium",
+  "block.ragnarokcraft.mimir_heart_block": "Bloco de Mimir Heart",
+  "block.ragnarokcraft.muspelium_block": "Bloco de Muspelium",
+  "block.ragnarokcraft.niflacril_block": "Bloco de Niflacril",
+
+  "block.ragnarokcraft.ragnarium_ore": "Minério de Ragnarium ",
+  "block.ragnarokcraft.ymirita_ore": "Minério de Ymirita",
+  "block.ragnarokcraft.thornium_ore": "Minério de Thornium",
+  "block.ragnarokcraft.mimir_heart_ore": "Minério de Mimir Heart",
+  "block.ragnarokcraft.muspelium_ore": "Minério de Muspelium",
+  "block.ragnarokcraft.niflacril_ore": "Minério de Niflacril",
+
+  "creativetab.ragnarokcraft_tab": "RagnarokCraft"
+}

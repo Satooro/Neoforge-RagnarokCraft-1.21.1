@@ -1,0 +1,37 @@
+{
+  "item.ragnarokcraft.gu_aberto":  "Gu of the open gu",
+  "item.ragnarokcraft.raw_ragnarium": "Raw Ragnarium",
+  "item.ragnarokcraft.raw_ymirita": "Raw Ymirita",
+  "item.ragnarokcraft.raw_thornium": "Raw Thornium",
+  "item.ragnarokcraft.raw_mimir_heart": "Raw Mimir Heart",
+  "item.ragnarokcraft.raw_muspelium": "Raw Muspelium",
+  "item.ragnarokcraft.raw_niflacril": "Raw Niflacril",
+
+  "item.ragnarokcraft.ragnarium_ingot": "Ragnarium Ingot",
+  "item.ragnarokcraft.ymirita_ingot": "Ymirita Ingot",
+  "item.ragnarokcraft.thornium_ingot": "Thornium Ingot",
+  "item.ragnarokcraft.mimir_heart_ingot": "Mimir Heart Ingot",
+  "item.ragnarokcraft.muspelium_ingot": "Muspelium Ingot",
+  "item.ragnarokcraft.niflacril_ingot": "Niflacril Ingot",
+
+  "block.ragnarokcraft.ragnarium_block": "Ragnarium Block",
+  "block.ragnarokcraft.ymirita_block": "Ymirita Block",
+  "block.ragnarokcraft.thornium_block": "Thornium Block",
+  "block.ragnarokcraft.mimir_heart_block": "Mimir Heart Block",
+  "block.ragnarokcraft.muspelium_block": "Muspelium Block",
+  "block.ragnarokcraft.niflacril_block": "Niflacril Block",
+
+  "block.ragnarokcraft.ragnarium_ore": "Ragnarium Ore",
+  "block.ragnarokcraft.ymirita_ore": "Ymirita Ore",
+  "block.ragnarokcraft.thornium_ore": "Thornium Ore",
+  "block.ragnarokcraft.mimir_heart_ore": "Mimir Heart Ore",
+  "block.ragnarokcraft.muspelium_ore": "Muspelium Ore",
+  "block.ragnarokcraft.niflacril_ore": "Niflacril Ore",
+
+  "item.ragnarokcraft.ymirita_helmet": "Ymirita Helmet",
+  "item.ragnarokcraft.ymirita_chestplate": "Ymirita Chestplate",
+  "item.ragnarokcraft.ymirita_leggings": "Ymirita Leggings",
+  "item.ragnarokcraft.ymirita_boots": "Ymirita Boots",
+
+  "creativetab.ragnarokcraft_tab": "RagnarokCraft"
+}
