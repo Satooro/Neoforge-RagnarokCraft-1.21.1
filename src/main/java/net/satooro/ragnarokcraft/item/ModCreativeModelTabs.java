@@ -5,9 +5,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.satooro.ragnarokcraft.RagnarokCraftMod;
 import net.satooro.ragnarokcraft.block.ModBlocks;
+import net.satooro.ragnarokcraft.block.entity.ModBlockEntities;
+import net.satooro.ragnarokcraft.block.entity.PedestalBlockEntity;
+import net.satooro.ragnarokcraft.block.entity.renderer.PedestalBlockEntityRenderer;
 
 import java.util.function.Supplier;
 
@@ -20,6 +24,7 @@ public class ModCreativeModelTabs {
                     .icon(() -> new ItemStack(ModItems.TESTE_ITEM))
                     .title(Component.translatable("creativetab.ragnarokcraft_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.CHISEL);
                         output.accept(ModItems.TESTE_ITEM.get());
                         output.accept(ModItems.RAW_RAGNARIUM.get());
                         output.accept(ModItems.RAW_YMIRITA.get());
@@ -48,6 +53,11 @@ public class ModCreativeModelTabs {
                         output.accept(ModItems.YMIRITA_CHESTPLATE);
                         output.accept(ModItems.YMIRITA_LEGGINGS);
                         output.accept(ModItems.YMIRITA_BOOTS);
+
+                        output.accept(ModItems.RAGNARIUM_PICKAXE);
+                        output.accept(ModItems.RAGNARIUM_SWORD);
+
+                        output.accept(ModBlocks.PEDESTAL);
                     })
                     .build());
 

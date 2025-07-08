@@ -33,6 +33,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.YMIRITA_BLOCK.get());
         dropSelf(ModBlocks.MIMIR_HEART_BLOCK.get());
 
+        dropSelf(ModBlocks.PEDESTAL.get());
+
         add(ModBlocks.RAGNARIUM_ORE.get(), block -> createOreDrop(ModBlocks.RAGNARIUM_ORE.get(), ModItems.RAW_RAGNARIUM.get()));
         add(ModBlocks.YMIRITA_ORE.get(), block -> createOreDrop(ModBlocks.YMIRITA_ORE.get(), ModItems.RAW_YMIRITA.get()));
         add(ModBlocks.THORNIUM_ORE.get(), block -> createOreDrop(ModBlocks.THORNIUM_ORE.get(), ModItems.RAW_THORNIUM.get()));

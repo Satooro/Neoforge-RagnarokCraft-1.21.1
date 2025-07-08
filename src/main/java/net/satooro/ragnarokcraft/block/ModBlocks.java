@@ -13,6 +13,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.satooro.ragnarokcraft.RagnarokCraftMod;
+import net.satooro.ragnarokcraft.block.custom.PedestalBlock;
 import net.satooro.ragnarokcraft.item.ModItems;
 
 import java.util.function.Supplier;
@@ -58,6 +59,8 @@ public class ModBlocks {
 //    public static final DeferredBlock<Block> NIFLACRIL_ORE = registerBlock("niflacril_ore",
 //            () -> new DropExperienceBlock(UniformInt.of(2, 6), BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 //                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal", () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){

@@ -3,16 +3,22 @@ package net.satooro.ragnarokcraft.item;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.SwordItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.satooro.ragnarokcraft.RagnarokCraftMod;
+import net.satooro.ragnarokcraft.item.custom.ChiselItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(RagnarokCraftMod.MOD_ID);
 
     public static final DeferredHolder<Item, Item> TESTE_ITEM = ITEMS.register("gu_aberto", () -> new Item(new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> CHISEL = ITEMS.register("chisel",
+            () -> new ChiselItem(new Item.Properties().durability(32)));
 
     // Raw Ingots
     public static final DeferredItem<Item> RAW_RAGNARIUM = ITEMS.register("raw_ragnarium", () -> new Item(new Item.Properties().stacksTo(64)));
@@ -33,6 +39,13 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> YMIRITA_CHESTPLATE = ITEMS.register("ymirita_chestplate", () -> new ArmorItem(ModArmorMaterials.YMIRITA_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredItem<ArmorItem> YMIRITA_LEGGINGS = ITEMS.register("ymirita_leggings", () -> new ArmorItem(ModArmorMaterials.YMIRITA_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredItem<ArmorItem> YMIRITA_BOOTS = ITEMS.register("ymirita_boots", () -> new ArmorItem(ModArmorMaterials.YMIRITA_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+
+    public static final DeferredItem<SwordItem> RAGNARIUM_SWORD = ITEMS.register("ragnarium_sword",
+            () -> new SwordItem(ModToolTiers.RAGNARIUM, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.RAGNARIUM, 4, -2.4f))));
+    public static final DeferredItem<PickaxeItem> RAGNARIUM_PICKAXE = ITEMS.register("ragnarium_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.RAGNARIUM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.RAGNARIUM, 1, -2.4f))));
 
 
     public static void register(IEventBus eventBus){

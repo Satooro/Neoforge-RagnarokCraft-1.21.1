@@ -1,7 +1,11 @@
 package net.satooro.ragnarokcraft;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.satooro.ragnarokcraft.block.ModBlocks;
+import net.satooro.ragnarokcraft.block.entity.ModBlockEntities;
+import net.satooro.ragnarokcraft.block.entity.renderer.PedestalBlockEntityRenderer;
+import net.satooro.ragnarokcraft.component.ModDataComponents;
 import net.satooro.ragnarokcraft.item.ModCreativeModelTabs;
 import net.satooro.ragnarokcraft.item.ModItems;
 import org.slf4j.Logger;
@@ -36,6 +40,9 @@ public class RagnarokCraftMod {
 
         NeoForge.EVENT_BUS.register(this);
 
+        ModDataComponents.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -69,5 +76,7 @@ public class RagnarokCraftMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
         }
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event){event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);}
     }
 }

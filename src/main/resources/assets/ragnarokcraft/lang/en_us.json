@@ -28,10 +28,16 @@
   "block.ragnarokcraft.muspelium_ore": "Muspelium Ore",
   "block.ragnarokcraft.niflacril_ore": "Niflacril Ore",
 
+  "block.ragnarokcraft.pedestal": "Pedestal",
+
   "item.ragnarokcraft.ymirita_helmet": "Ymirita Helmet",
   "item.ragnarokcraft.ymirita_chestplate": "Ymirita Chestplate",
   "item.ragnarokcraft.ymirita_leggings": "Ymirita Leggings",
   "item.ragnarokcraft.ymirita_boots": "Ymirita Boots",
+  "item.ragnarokcraft.chisel": "Chisel",
+
+  "tooltip.ragnarokcraft.chisel.shift_down": "This Item can chisel blocks into Bricks",
+  "tooltip.ragnarokcraft.chisel": "Hold §bSHIFT§r to how to use",
 
   "creativetab.ragnarokcraft_tab": "RagnarokCraft"
 }
