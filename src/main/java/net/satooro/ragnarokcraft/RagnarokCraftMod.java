@@ -2,12 +2,15 @@ package net.satooro.ragnarokcraft;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.satooro.ragnarokcraft.block.ModBlocks;
 import net.satooro.ragnarokcraft.block.entity.ModBlockEntities;
 import net.satooro.ragnarokcraft.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.satooro.ragnarokcraft.component.ModDataComponents;
 import net.satooro.ragnarokcraft.item.ModCreativeModelTabs;
 import net.satooro.ragnarokcraft.item.ModItems;
+import net.satooro.ragnarokcraft.screen.ModMenuTypes;
+import net.satooro.ragnarokcraft.screen.custom.PedestalScreen;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -43,6 +46,9 @@ public class RagnarokCraftMod {
         ModDataComponents.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -78,5 +84,10 @@ public class RagnarokCraftMod {
         }
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event){event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);}
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event){
+            event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+        }
     }
 }
