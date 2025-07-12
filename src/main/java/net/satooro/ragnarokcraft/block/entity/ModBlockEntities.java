@@ -18,6 +18,10 @@ public class ModBlockEntities {
                     PedestalBlockEntity::new, ModBlocks.PEDESTAL.get()
             ).build(null));
 
+    public static final Supplier<BlockEntityType<AssemblerBlockEntity>> ASSEMBLER_BE = BLOCK_ENTITIES.register("assembler_be", () -> BlockEntityType.Builder.of(
+            AssemblerBlockEntity::new, ModBlocks.ASSEMBLER.get()
+    ).build(null));
+
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);
     }
