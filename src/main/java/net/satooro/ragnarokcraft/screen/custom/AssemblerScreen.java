@@ -47,7 +47,9 @@ public class AssemblerScreen extends AbstractContainerScreen<AssemblerMenu> {
 
     private void renderProgressBar(GuiGraphics guiGraphics, int x, int y){
         if (menu.isCrafting()) {
-//            guiGraphics.blit(GUI_TEXTURE, x + 145, y + 42, 178, 2, 16, menu.getScaledProgress());
+            guiGraphics.blit(GUI_TEXTURE, x + 146, y + 35 + (17 - menu.getScaledProgress()), 178, 16 - menu.getScaledProgress() + 1, 2, menu.getScaledProgress());
+
+//            guiGraphics.blit(GUI_TEXTURE, x + 146, y + 51 + (22 - menu.getScaledProgress()), 178, 22 - menu.getScaledProgress(), 0, menu.getScaledProgress());
         }
     }
 }

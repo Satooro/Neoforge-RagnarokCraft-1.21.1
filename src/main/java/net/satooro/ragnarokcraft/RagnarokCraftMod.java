@@ -10,7 +10,6 @@ import net.satooro.ragnarokcraft.component.ModDataComponents;
 import net.satooro.ragnarokcraft.item.ModCreativeModelTabs;
 import net.satooro.ragnarokcraft.item.ModItems;
 import net.satooro.ragnarokcraft.screen.ModMenuTypes;
-import net.satooro.ragnarokcraft.screen.custom.AssemblerMenu;
 import net.satooro.ragnarokcraft.screen.custom.AssemblerScreen;
 import net.satooro.ragnarokcraft.screen.custom.PedestalScreen;
 import org.slf4j.Logger;

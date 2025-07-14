@@ -11,6 +11,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.satooro.ragnarokcraft.RagnarokCraftMod;
 import net.satooro.ragnarokcraft.item.custom.ChiselItem;
+import net.satooro.ragnarokcraft.item.custom.ComponentItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(RagnarokCraftMod.MOD_ID);
@@ -27,6 +28,18 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_MIMIR_HEART = ITEMS.register("raw_mimir_heart", () -> new Item(new Item.Properties().stacksTo(64)));
     public static final DeferredItem<Item> RAW_MUSPELIUM = ITEMS.register("raw_muspelium", () -> new Item(new Item.Properties().stacksTo(64)));
 //    public static final DeferredHolder<Item, Item> RAW_NIFLACRIL = ITEMS.register("raw_niflacril", () -> new Item(new Item.Properties().stacksTo(64)));
+
+    // Upgrades
+    public static final DeferredItem<Item> SPEED_UPGRADE = ITEMS.register("speed_upgrade", () -> new Item(new Item.Properties().stacksTo(64)));
+
+    // Components
+    public static final DeferredItem<Item> COMPONENT_TIER1 = ITEMS.register("component_tier1", () -> new ComponentItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> COMPONENT_TIER2 = ITEMS.register("component_tier2", () -> new ComponentItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> COMPONENT_TIER3 = ITEMS.register("component_tier3", () -> new ComponentItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> COMPONENT_TIER4 = ITEMS.register("component_tier4", () -> new ComponentItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> COMPONENT_TIER5 = ITEMS.register("component_tier5", () -> new ComponentItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> COMPONENT_TIER6 = ITEMS.register("component_tier6", () -> new ComponentItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> COMPONENT_TIER7 = ITEMS.register("component_tier7", () -> new ComponentItem(new Item.Properties().stacksTo(1)));
 
     // Ingots
     public static final DeferredItem<Item> RAGNARIUM_INGOT = ITEMS.register("ragnarium_ingot", () -> new Item(new Item.Properties().stacksTo(64)));

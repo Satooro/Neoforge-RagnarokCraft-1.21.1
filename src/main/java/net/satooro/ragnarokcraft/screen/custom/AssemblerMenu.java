@@ -11,7 +11,9 @@ import net.neoforged.neoforge.items.SlotItemHandler;
 import net.satooro.ragnarokcraft.block.ModBlocks;
 import net.satooro.ragnarokcraft.block.entity.AssemblerBlockEntity;
 import net.satooro.ragnarokcraft.screen.ModMenuTypes;
-import org.jetbrains.annotations.Nullable;
+import net.satooro.ragnarokcraft.slots.InputSlot;
+import net.satooro.ragnarokcraft.slots.ResultSlot;
+import net.satooro.ragnarokcraft.slots.UpgradeSlot;
 
 public class AssemblerMenu extends AbstractContainerMenu {
     public final AssemblerBlockEntity blockEntity;
@@ -32,17 +34,27 @@ public class AssemblerMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 49, 11));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 1, 70, 11));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 2, 91, 11));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 3, 112, 11));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 4, 49, 61));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 5, 70, 61));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 6, 91, 61));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 7, 112, 61));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 8, 127, 36));
-//        this.addSlot(new ResultSlot(this.blockEntity.inventory, 8, 126, 42));
-//        this.addSlot(new ResultSlot(inv.player, 8));
+        // INPUTS
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 0, 49, 11));
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 1, 70, 11));
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 2, 91, 11));
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 3, 112, 11));
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 4, 49, 61));
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 5, 70, 61));
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 6, 91, 61));
+        this.addSlot(new InputSlot(this.blockEntity.itemHandler, 7, 112, 61));
+
+        // OUTPUT
+        this.addSlot(new ResultSlot(this.blockEntity.itemHandler, 8, 127, 36));
+
+        // COMPONENT
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 9, 34, 36));
+
+        // UPGRADES
+        this.addSlot(new UpgradeSlot(this.blockEntity.itemHandler, 10, 7, 8));
+        this.addSlot(new UpgradeSlot(this.blockEntity.itemHandler, 11, 7, 26));
+        this.addSlot(new UpgradeSlot(this.blockEntity.itemHandler, 12, 7, 44));
+        this.addSlot(new UpgradeSlot(this.blockEntity.itemHandler, 13, 7, 62));
 
         addDataSlots(data);
     }
