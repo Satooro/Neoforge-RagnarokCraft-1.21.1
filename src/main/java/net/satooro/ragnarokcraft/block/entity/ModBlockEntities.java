@@ -22,6 +22,10 @@ public class ModBlockEntities {
             AssemblerBlockEntity::new, ModBlocks.ASSEMBLER.get()
     ).build(null));
 
+    public static final Supplier<BlockEntityType<MinerBlockEntity>> MINER_BE = BLOCK_ENTITIES.register("miner_be", () -> BlockEntityType.Builder.of(
+            MinerBlockEntity::new, ModBlocks.MINER.get()
+    ).build(null));
+
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);
     }

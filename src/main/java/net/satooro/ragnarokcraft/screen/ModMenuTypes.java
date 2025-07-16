@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.satooro.ragnarokcraft.RagnarokCraftMod;
 import net.satooro.ragnarokcraft.screen.custom.AssemblerMenu;
+import net.satooro.ragnarokcraft.screen.custom.MinerMenu;
 import net.satooro.ragnarokcraft.screen.custom.PedestalMenu;
 
 public class ModMenuTypes {
@@ -20,6 +21,9 @@ public class ModMenuTypes {
             registerMenuType("pedestal_menu", PedestalMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<AssemblerMenu>> ASSEMBLER_MENU =
             registerMenuType("assembler_menu", AssemblerMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MinerMenu>> MINER_MENU =
+            registerMenuType("miner_menu", MinerMenu::new);
+
 
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory){

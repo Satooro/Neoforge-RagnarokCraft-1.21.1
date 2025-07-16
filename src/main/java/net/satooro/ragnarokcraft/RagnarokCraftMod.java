@@ -11,6 +11,8 @@ import net.satooro.ragnarokcraft.item.ModCreativeModelTabs;
 import net.satooro.ragnarokcraft.item.ModItems;
 import net.satooro.ragnarokcraft.screen.ModMenuTypes;
 import net.satooro.ragnarokcraft.screen.custom.AssemblerScreen;
+import net.satooro.ragnarokcraft.screen.custom.MinerMenu;
+import net.satooro.ragnarokcraft.screen.custom.MinerScreen;
 import net.satooro.ragnarokcraft.screen.custom.PedestalScreen;
 import org.slf4j.Logger;
 
@@ -90,6 +92,7 @@ public class RagnarokCraftMod {
         public static void registerScreens(RegisterMenuScreensEvent event){
             event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
             event.register(ModMenuTypes.ASSEMBLER_MENU.get(), AssemblerScreen::new);
+            event.register(ModMenuTypes.MINER_MENU.get(), MinerScreen::new);
         }
     }
 }

@@ -14,6 +14,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.satooro.ragnarokcraft.RagnarokCraftMod;
 import net.satooro.ragnarokcraft.block.custom.AssemblerBlock;
+import net.satooro.ragnarokcraft.block.custom.MinerBlock;
 import net.satooro.ragnarokcraft.block.custom.PedestalBlock;
 import net.satooro.ragnarokcraft.item.ModItems;
 
@@ -63,6 +64,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal", () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
     public static final DeferredBlock<Block> ASSEMBLER = registerBlock("assembler", () -> new AssemblerBlock(BlockBehaviour.Properties.of().noOcclusion()));
+    public static final DeferredBlock<Block> MINER = registerBlock("miner", () -> new MinerBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){

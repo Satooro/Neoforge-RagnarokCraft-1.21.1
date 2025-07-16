@@ -74,6 +74,7 @@ public class ModCreativeModelTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.PEDESTAL);
                         output.accept(ModBlocks.ASSEMBLER);
+                        output.accept(ModBlocks.MINER);
                         output.accept(ModItems.SPEED_UPGRADE.get());
                     })
                     .build());
